@@ -181,6 +181,9 @@ struct audio_policy {
                                int index_min,
                                int index_max);
 
+    /* set mute LED */
+    int (*set_mute_led_on)(struct audio_policy *pol, bool on);
+
     /* sets the new stream volume at a level corresponding to the supplied
      * index. The index is within the range specified by init_stream_volume() */
     int (*set_stream_volume_index)(struct audio_policy *pol,
